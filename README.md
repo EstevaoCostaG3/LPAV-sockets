@@ -6,4 +6,24 @@ O servidor gerencia uma thread para cada cliente conectado à ele via socket. As
 
 ## Usage
 
-_loading..._
+1. Após clonar o repositório, compile as classes cliente e servidor.
+```
+javac src/ChatClient/ChatClient.java
+javac src/ChatServer/ChatServer.java
+```
+
+2. Inicialize o servidor em um terminal.
+```
+cd src/ChatServer
+java src/ChatServer/ChatServer
+```
+
+3. Inicialize um ou mais clientes como a seguir. Será necessário um terminal para cada cliente.
+```
+cd src/ChatClient
+NOME=Joao
+java ChatClient $NOME localhost 5000
+```
+
+4. Pronto. Agora basta digitar no terminal de algum dos clientes e teclar "Enter" para que a mensagem seja propagada para todos os demais clientes do chat.
+
